@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class JSON {
@@ -15,6 +17,18 @@ public class JSON {
 
     public JSON getJSON(String key) {
         return this.keyToValue.get(key);
+    }
+
+    public List<String> getAllKeys() {
+        return new ArrayList<>(keyToValue.keySet());
+        /*
+        or
+            List<String> keys = new ArrayList<>();
+            for (Map.Entry<String, JSON> jsonEntry : keyToValue.entrySet()) {
+             keys.add(jsonEntry.getKey());
+            }
+            return keys;
+        */
     }
 }
 
