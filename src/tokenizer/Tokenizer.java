@@ -1,0 +1,9 @@
+package tokenizer;
+
+import model.KeyValuePair;
+
+import java.util.List;
+
+public interface Tokenizer {
+    List<KeyValuePair> tokenize(String text);
+}
